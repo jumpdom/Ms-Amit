@@ -10,31 +10,30 @@ body {
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     text-align: center;
+    line-height: 1.6;
 }
 
+/* Logo styling */
 .navbar {
     padding: 20px;
+    background: rgba(0,0,0,0.8);
     border-bottom: 1px solid #222;
 }
 
-.text-logo {
+.logo-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
 }
 
-.logo-icon {
-    background: var(--accent-color);
-    padding: 5px 12px;
-    border-radius: 5px;
+.site-logo {
+    height: 80px; /* Ise kam-zyada karke adjust kar sakte hain */
+    width: auto;
+    border-radius: 8px;
 }
 
-.dot-xyz { color: var(--accent-color); }
-
-.hero { padding: 100px 20px; }
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+/* Hero Section */
+.hero { padding: 80px 20px; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; }
 
 .blue-gradient {
     background: linear-gradient(90deg, #3b82f6, #2dd4bf);
@@ -42,22 +41,32 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.social-section { padding: 50px 20px; }
-
+/* Buttons */
+.social-section { padding: 40px 20px; }
 .social-links {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
 }
 
 .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
     color: white;
     font-weight: 600;
+    transition: transform 0.2s;
 }
 
+.social-btn:hover { transform: scale(1.05); }
 .facebook { background: #1877F2; }
 .email { background: #333; }
+
+footer {
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
