@@ -1,72 +1,51 @@
 :root {
-    --bg-color: #0a0a0a;
-    --accent-color: #3b82f6;
-    --text-main: #ffffff;
+    --bg: #050505;
+    --card: #111111;
+    --accent: #3b82f6;
+    --text: #ffffff;
 }
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
 
 body {
     margin: 0;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    text-align: center;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
 
-/* Logo styling */
-.navbar {
-    padding: 20px;
-    background: rgba(0,0,0,0.8);
-    border-bottom: 1px solid #222;
-}
+.navbar { padding: 15px; text-align: center; border-bottom: 1px solid #222; background: #000; }
+.site-logo { height: 50px; border-radius: 5px; }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-}
+.hero { padding: 100px 20px; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('IMG_4220.jpeg'); background-size: cover; background-position: center; }
+.hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
+.blue-gradient { background: linear-gradient(90deg, #3b82f6, #00f2fe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.cta-main { background: var(--accent); color: white; padding: 12px 30px; text-decoration: none; border-radius: 50px; font-weight: 600; display: inline-block; margin-top: 20px; }
 
-.site-logo {
-    height: 80px; /* Ise kam-zyada karke adjust kar sakte hain */
-    width: auto;
-    border-radius: 8px;
-}
+.section-title { font-size: 2rem; margin-bottom: 40px; text-align: center; }
 
-/* Hero Section */
-.hero { padding: 80px 20px; }
-.hero h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; }
+.services { padding: 80px 20px; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.card { background: var(--card); padding: 40px 20px; border-radius: 15px; transition: 0.3s; border: 1px solid #222; text-align: center; }
+.card:hover { border-color: var(--accent); transform: translateY(-5px); }
+.card i { font-size: 45px; color: var(--accent); margin-bottom: 20px; }
 
-.blue-gradient {
-    background: linear-gradient(90deg, #3b82f6, #2dd4bf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+.work-gallery { padding: 80px 20px; background: #0a0a0a; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; }
+.gallery-item { position: relative; border-radius: 10px; overflow: hidden; height: 250px; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.gallery-item:hover img { transform: scale(1.1); }
 
-/* Buttons */
-.social-section { padding: 40px 20px; }
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
+.contact-section { padding: 100px 20px; text-align: center; }
+.contact-buttons { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+.btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+.fb { background: #1877F2; }
+.mail { background: #333; }
 
-.social-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    transition: transform 0.2s;
-}
+footer { padding: 40px; text-align: center; color: #555; font-size: 0.9rem; }
 
-.social-btn:hover { transform: scale(1.05); }
-.facebook { background: #1877F2; }
-.email { background: #333; }
-
-footer {
-    padding: 40px 20px;
-    font-size: 0.9rem;
-    color: #666;
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .contact-buttons { flex-direction: column; align-items: center; }
 }
